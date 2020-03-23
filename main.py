@@ -1,5 +1,5 @@
 import pygame as py
-import py.sprite sprite
+import py.sprite Sprite
 import math
 import random
 import time
