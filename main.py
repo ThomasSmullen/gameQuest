@@ -2,7 +2,7 @@
 # Jumpy! (a platform game) - Part 2
 # Video link: https://www.youtube.com/watch?v=8LRI0RLKyt0
 # Player movement
-
+#importing libraries and other files
 import pygame as pg
 import random
 from settings import *

@@ -17,10 +17,14 @@ class Player(pg.sprite.Sprite):
     def update(self):
         self.acc = vec(0, 0)
         keys = pg.key.get_pressed()
-        if keys[pg.K_LEFT]:
+        if keys[pg.K_a]:
             self.acc.x = -PLAYER_ACC
-        if keys[pg.K_RIGHT]:
+        if keys[pg.K_d]:
             self.acc.x = PLAYER_ACC
+        if keys[pg.K_w]:
+            self.acc.y = -PLAYER_ACC
+        if keys[pg.K_s]:
+            self.acc.y = PLAYER_ACC
 
         # apply friction
         self.acc += self.vel * PLAYER_FRICTION
@@ -31,6 +35,11 @@ class Player(pg.sprite.Sprite):
         if self.pos.x > WIDTH:
             self.pos.x = 0
         if self.pos.x < 0:
-            self.pos.x = WIDTH
+            self.pos.x = 
+        #Wrap around top of screen
+        if self.pos.y > HEIGHT:
+            self.pos.x = 0
+        if self.pos.y < 0:
+            self.pos.x = HEIGHT
 
         self.rect.center = self.pos
