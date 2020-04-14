@@ -3,7 +3,7 @@ TITLE = "Jumpy!"
 WIDTH = 480
 HEIGHT = 600
 FPS = 60
-
+PLATFORMCOUNT = 5
 # Player properties
 PLAYER_ACC = 0.5
 PLAYER_FRICTION = -0.12
